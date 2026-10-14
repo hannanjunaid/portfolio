@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import { site, siteTitle } from "@/lib/site";
+import { HannanHero } from "@/components/hannan-hero/hannan-hero";
 import { Hero } from "@/components/hero/hero";
 import { About } from "@/components/about/about";
 import { Projects } from "@/components/projects/projects";
@@ -31,6 +32,7 @@ export default function Home() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, "\\u003c") }} />
+      <HannanHero />
       <Hero />
       <SectionTransition />
       <About />
